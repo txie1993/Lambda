@@ -6,6 +6,13 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyCjh0P_-tQrv-_6BqsqNIxV-Ae547ng1fQ",
+      authDomain: "ember-chat-lambda.firebaseapp.com",
+      databaseURL: "https://ember-chat-lambda.firebaseio.com",
+      storageBucket: "ember-chat-lambda.appspot.com",
+      messagingSenderId: "975232635650"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

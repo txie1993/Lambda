@@ -1,0 +1,19 @@
+<div class="navbar navbar-default navbar-fixed-bottom message-bar">
+  <div class="container">
+    {{#each model as |message|}}
+      <div class="alert alert-warning alert-chat">
+        <p><span class="label label-warning label-user">{{message.user}}:</span> {{message.text}}</p>
+      </div>
+    {{/each}}
+    <form class="form-horizontal">
+      <div class="form-group">
+        <div class="col-xs-10">
+          {{input class='form-control input-lg input-block' placeholder='Your message' value=textMessageFromInput}}
+        </div>
+        <div class="col-xs-2">
+          <button type="submit" class="btn btn-primary btn-lg" {{action 'createMessage' textMessageFromInput}}>Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

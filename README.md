@@ -1,53 +1,36 @@
-# Lambda
+## Lambda - An Ember Chat
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+### Background
 
-## Prerequisites
+Twitch chat culture is one of the most prominent phenomenon on the internet - the simple ability to add emotes through text recognition creates hundreds of reasons to use Twitch chat over another chat client.
 
-You will need the following things properly installed on your computer.
+Like Twitch itself, I will be using Ember on the front end to deploy a chat client that can recognize words as emotes. Users will be able to select a username upon entering the chatroom, and spam the chat with emotes and copypasta to their heart's desire.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+### Functionality & MVP
 
-## Installation
+With this extension, users will be able to:
 
-* `git clone <repository-url>` this repository
-* `cd lambda`
-* `npm install`
-* `bower install`
+- [ ] Enter a username upon entering the chatroom
+- [ ] Send and receive messages
+- [ ] Send and receive emotes embedded in messages by typing the emotes' names
+- [ ] Be able to pull up an emote menu that will fill the chat for them, or tab autocomplete emote names.
 
-## Running / Development
+### Wireframes
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+![wireframes](https://github.com/txie1993/Lambda/blob/master/Lambda.png?raw=true)
 
-### Code Generators
+### Technologies & Technical Challenges
 
-Make use of the many generators for code, try `ember help generate` for more details
+This app will be created with Ember and Pusher, both technologies I have not worked with in the past. I will need to allow myself some time to learn Ember and create some practice projects before I move onto actually creating Lambda.
 
-### Running Tests
+### Implementation Timeline
 
-* `ember test`
-* `ember test --server`
+**Day 1/2**: Do Ember tutorials. Complete "making your first Ember app" on the Ember website.
 
-### Building
+**Day 3-7 (weekend)**: Implement a basic chat. Users should be able to choose a username and be able to send messages.
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+**Day 8**: The app should be able to recognize text as emotes.
 
-### Deploying
+**Day 9**: Create an emote modal.
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+**Day 10-11**: Styling
