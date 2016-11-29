@@ -1,10 +1,10 @@
 <div class="navbar navbar-default navbar-fixed-bottom message-bar">
   <div class="chat-container">
-    <div class="chat">
+    <div class="chat" id="chat">
       {{#each model.messages as |message|}}
-        <div class="message">
-          <p><span class="username">{{message.user}}:</span> {{{message.text}}}</p>
-        </div>
+        {{#chat-box user=message.user}}
+          {{{message.text}}}
+        {{/chat-box}}
       {{/each}}
 
     </div>
