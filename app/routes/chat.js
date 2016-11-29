@@ -18,35 +18,21 @@ export default Ember.Route.extend({
 
   actions: {
     createMessage(message) {
+      this.store.query('emote', {}).then((result) => {
 
-      const checkEmotes = (str) => {
-        return this.store.query('emote', {}).then((result) => {
-
-          result.forEach(e => {
-            let re = new RegExp(`${e.get('name')}`, "g");
-            str = str.replace(re, `${e.get('url')}`);
-          });
-
-          return str;
+        result.forEach(e => {
+          let re = new RegExp(`${e.get('name')}`, "g");
+          message = message.replace(re, `${e.get('url')}`);
         });
-      };
+        let newRecord = this.store.createRecord('message', {
+          text: message,
+          user: this.get('userFromParams')
+        });
 
-      let newRecord = this.store.createRecord('message', {
-        text: checkEmotes(message),
-        user: this.get('userFromParams')
+        newRecord.save();
+
+        this.controller.set('textMessageFromInput', '');
       });
-
-      newRecord.save();
-
-      this.controller.set('textMessageFromInput', '');
-    },
-    saveKappa() {
-      // let newKappa = this.store.createRecord('emote', {
-      //   name: "PogChamp",
-      //   url: "<img src='https://static-cdn.jtvnw.net/emoticons/v1/88/1.0'></img>"
-      // });
-      //
-      // newKappa.save();
     }
   }
 });
