@@ -1,8 +1,8 @@
 <div class="navbar navbar-default navbar-fixed-bottom message-bar">
   <div class="container">
-    {{#each model.emotes as |message|}}
+    {{#each model.emotes as |e|}}
       <div class="alert alert-warning alert-chat">
-        <p><span class="label label-warning label-user">{{message.name}}:</span> {{{message.url}}}</p>
+        <p><span class="label label-warning label-user">{{e.name}}:</span> {{{e.url}}}</p>
       </div>
     {{/each}}
     {{#each model.messages as |message|}}
