@@ -10,20 +10,26 @@ export default Ember.Route.extend({
 
     return Ember.RSVP.hash({
       messages: this.store.query('message', {
-        limitToLast: 5
+        limitToLast: 15
       }),
       emotes: this.store.findAll('emote')
     });
   },
 
   actions: {
+    appendEmote(emote){
+      let m = this.controller.get('textMessageFromInput');
+      if (m) this.controller.set("textMessageFromInput", m+" "+emote+" ");
+      else this.controller.set("textMessageFromInput", emote);
+    },
     createMessage(message) {
       this.store.query('emote', {}).then((result) => {
 
         result.forEach(e => {
           let re = new RegExp(`${e.get('name')}`, "g");
-          message = message.replace(re, `${e.get('url')}`);
+          message = message.replace(re, `<div class="tooltip"><img src=${e.get('url')}><span class="tooltiptext">${e.get('name')}</span></img></div>`);
         });
+
         let newRecord = this.store.createRecord('message', {
           text: message,
           user: this.get('userFromParams')
@@ -33,6 +39,14 @@ export default Ember.Route.extend({
 
         this.controller.set('textMessageFromInput', '');
       });
+    },
+    saveKappa(){
+      let newEmote = this.store.createRecord('emote', {
+        name: "PogChamp",
+        url: "https://static-cdn.jtvnw.net/emoticons/v1/88/1.0"
+      });
+
+      newEmote.save();
     }
   }
 });
