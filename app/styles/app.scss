@@ -6,6 +6,7 @@ body {
   font-family: Helvetica;
 }
 
+
 .username {
   // color: unquote("rgb(#{$red}, #{$green}, #{$blue})");
   font-weight: bold;
@@ -75,6 +76,10 @@ form {
 .chat-text {
   width: 90%;
   height: 50px;
+}
+
+.hidden {
+  display: none;
 }
 
 .emote-container {

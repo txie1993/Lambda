@@ -28,6 +28,10 @@ export default Ember.Route.extend({
       if (m) this.controller.set("textMessageFromInput", m + " " + emote);
       else this.controller.set("textMessageFromInput", emote);
     },
+    showHideEmotes() {
+      let menu = document.getElementById('emote-container');
+      menu.className = (menu.className === "hidden" ? "emote-container" : "hidden");
+    },
     createMessage(message) {
       if (message) {
         this.store.query('emote', {}).then((result) => {

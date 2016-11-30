@@ -13,12 +13,15 @@
         <div class="">
           {{input class='chat-text' placeholder='Your message' value=textMessageFromInput}}
         </div>
-        <div class="emote-container">
+        <div>
+          <h3 {{action 'showHideEmotes'}}>e</h3>
+        <div id="emote-container" class="hidden">
           {{#each model.emotes as |e|}}
             <div class="emote">
               <div class="tooltip" {{action 'appendEmote' e.name}}><img src="{{e.url}}"><span class="tooltiptext">{{e.name}}</span></div>
             </div>
           {{/each}}
+        </div>
         </div>
         <div class="col-xs-2">
           <button type="submit" class="btn btn-primary btn-lg" {{action 'createMessage' textMessageFromInput}}>Send</button>
