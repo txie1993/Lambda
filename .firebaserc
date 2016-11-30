@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ember-chat-lambda"
+    "default": "ember-chat-lambda",
+    "lambda": "ember-chat-lambda"
   }
 }

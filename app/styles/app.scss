@@ -1,3 +1,16 @@
+$red: random(256)-1;
+$green: random(256)-1;
+$blue: random(256)-1;
+
+body {
+  font-family: Helvetica;
+}
+
+.username {
+  // color: unquote("rgb(#{$red}, #{$green}, #{$blue})");
+  font-weight: bold;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -5,17 +18,17 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 80px;
+  min-width: 0;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px;
   position: absolute;
   z-index: 1;
   bottom: 150%;
   left: 50%;
-  margin-left: -40px;
+  transform: translateX(-50%);
 }
 
 .tooltip .tooltiptext::after {
@@ -50,7 +63,7 @@
   border-top: 1px solid black;
 }
 
-form{
+form {
   width: 50%;
 }
 
@@ -59,7 +72,7 @@ form{
   height: 20vh;
 }
 
-.chat-text{
+.chat-text {
   width: 90%;
   height: 50px;
 }
@@ -68,4 +81,6 @@ form{
   background: black;
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
+  bottom: 100px;
 }
