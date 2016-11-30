@@ -14,9 +14,11 @@ const stringToColor = (str) => {
 };
 
 export default Ember.Component.extend({
+  didReceiveAttrs(){
+    this.set('userColor', Ember.String.htmlSafe("color :" + stringToColor(this.user)));
+  },
   didRender() {
     let c = document.getElementById("chat");
     c.scrollTop = c.scrollHeight;
-    this.set('userColor', stringToColor(this.user));
   }
 });

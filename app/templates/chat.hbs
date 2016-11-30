@@ -10,13 +10,13 @@
     </div>
     <form>
       <div class="chat-input">
-        <div class="col-xs-10">
+        <div class="">
           {{input class='chat-text' placeholder='Your message' value=textMessageFromInput}}
         </div>
         <div class="emote-container">
           {{#each model.emotes as |e|}}
             <div class="emote">
-              <div {{action 'appendEmote' e.name}}><img src="{{e.url}}"></div>
+              <div class="tooltip" {{action 'appendEmote' e.name}}><img src="{{e.url}}"><span class="tooltiptext">{{e.name}}</span></div>
             </div>
           {{/each}}
         </div>

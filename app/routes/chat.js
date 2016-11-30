@@ -25,7 +25,7 @@ export default Ember.Route.extend({
     },
     appendEmote(emote) {
       let m = this.controller.get('textMessageFromInput');
-      if (m) this.controller.set("textMessageFromInput", m + " " + emote + " ");
+      if (m) this.controller.set("textMessageFromInput", m + " " + emote);
       else this.controller.set("textMessageFromInput", emote);
     },
     createMessage(message) {
