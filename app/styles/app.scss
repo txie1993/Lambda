@@ -1,14 +1,96 @@
-$red: random(256)-1;
-$green: random(256)-1;
-$blue: random(256)-1;
-
 body {
   font-family: Helvetica;
+  margin: 0;
 }
 
+form {
+  width: 85%;
+  margin: 10px auto;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-button {
+  margin: 10px;
+  background-color: rgba(196,66,0,1);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  white-space: nowrap;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+.logo {
+  font-size: 8em;
+}
+
+.chat-text {
+  width: 95%;
+  height: 50px;
+  padding: 7px 25px 7px 7px;
+  margin: 0;
+  resize: none;
+}
+
+.splashpage {
+  background-color: rgba(196,66,0,0.8);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-background {
+  background-color: rgba(196,66,0,0.8);
+  display: flex;
+  justify-content: center;
+}
+
+.chat-container {
+  border-radius: 10px;
+  background: white;
+  width: 50%;
+}
+
+.name-entry {
+  font-size: 5em;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid black;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
 
 .username {
-  // color: unquote("rgb(#{$red}, #{$green}, #{$blue})");
   font-weight: bold;
 }
 
@@ -18,6 +100,7 @@ body {
 }
 
 .tooltip .tooltiptext {
+  font-family: Helvetica;
   visibility: hidden;
   min-width: 0;
   background-color: black;
@@ -55,26 +138,30 @@ body {
 }
 
 .chat {
-  width: 50%;
+  width: 90%;
   height: 80vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .message {
-  border-top: 1px solid black;
-}
-
-form {
-  width: 50%;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .chat-input {
+  position: relative;
   width: 100%;
-  height: 20vh;
+  height: 18vh;
+}
+
+i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .chat-text {
-  width: 90%;
+  width: 95%;
   height: 50px;
 }
 
@@ -82,10 +169,27 @@ form {
   display: none;
 }
 
+.textbox {
+  position: relative;
+}
+
 .emote-container {
-  background: black;
+  width: 200px;
+  background: white;
   display: flex;
+  justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
   position: absolute;
-  bottom: 100px;
+  right: -4px;
+  bottom: 67px;
+  box-shadow: rgba(0,0,0,.2) 0 0 0 1px inset;
+}
+
+.emote {
+  padding: 5px;
+}
+
+.emote:hover {
+  background: rgba(0,0,0,.1);
 }

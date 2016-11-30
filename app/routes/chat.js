@@ -55,8 +55,8 @@ export default Ember.Route.extend({
     },
     saveKappa() {
       let newEmote = this.store.createRecord('emote', {
-        name: "PogChamp",
-        url: "https://static-cdn.jtvnw.net/emoticons/v1/88/1.0"
+        name: "LUL",
+        url: "https://cdn.betterttv.net/emote/567b00c61ddbe1786688a633/1x"
       });
 
       newEmote.save();

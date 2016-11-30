@@ -1,16 +1,18 @@
-<div class="jumbotron text-center">
-    <div class="container">
-        <div class="col-md-4 col-md-offset-4">
-          {{input class='form-control input-lg' placeholder="Enter your name." value=name}}
-        </div>
+<div class="splashpage">
 
-        <div class="col-md-4 col-md-offset-4">
-          {{#if name}}
-              <h2>Please join to the chat {{name}}!</h2>
-            {{#link-to 'chat' name class="btn-2"}}Join{{/link-to}}
-          {{else}}
-              <p>Please enter your nickname and click the join button.</p>
-          {{/if}}
-        </div>
+    <div class="logo">
+      LΛMBDΛ
     </div>
+
+    {{input class='name-entry' placeholder="What should we call you?" value=name}}
+
+
+  <div class="splash-message">
+    {{#if name}}
+      <h2>Welcome to the meme zone {{name}}!</h2>
+      {{#link-to 'chat' name class="btn-2" }}Join{{/link-to}}
+    {{else}}
+      <p>Please enter your nickname and click the join button.</p>
+    {{/if}}
+  </div>
 </div>
