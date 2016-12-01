@@ -15,7 +15,7 @@ form {
 
 .btn {
   cursor: pointer;
-  border: 0px;
+  border: 0;
   margin: 10px;
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
@@ -24,7 +24,7 @@ form {
   color: #ffffff;
   font-size: 20px;
   background: #C44208;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
@@ -147,6 +147,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px;
 }
 
 .chat {
@@ -177,7 +178,7 @@ i {
   cursor: pointer;
 }
 
-i:hover{
+i:hover {
   color: rgba(0,0,0,0.9);
 }
 
@@ -200,7 +201,7 @@ i:hover{
   flex-wrap: wrap;
   position: absolute;
   right: 0;
-  top:-43px;
+  top: -43px;
   box-shadow: rgba(0,0,0,.2) 0 0 0 1px inset;
 }
 

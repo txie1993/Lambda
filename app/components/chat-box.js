@@ -19,6 +19,7 @@ export default Ember.Component.extend({
   },
   didRender() {
     let c = document.getElementById("chat");
+    // console.log(c.scrollTop, c.scrollHeight);
     c.scrollTop = c.scrollHeight;
   }
 });
