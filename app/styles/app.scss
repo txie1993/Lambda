@@ -1,6 +1,7 @@
 body {
   font-family: Helvetica;
   margin: 0;
+  overflow-y: hidden;
 }
 
 form {
@@ -167,7 +168,7 @@ form {
 
 .chat-input {
   width: 100%;
-  height: 18vh;
+  height: 16vh;
 }
 
 i {
