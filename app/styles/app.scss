@@ -1,7 +1,6 @@
 body {
   font-family: Helvetica;
   margin: 0;
-  overflow-y: hidden;
 }
 
 form {
@@ -17,7 +16,7 @@ form {
 .btn {
   cursor: pointer;
   border: 0;
-  margin: 10px;
+  margin: 5px;
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
