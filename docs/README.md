@@ -17,7 +17,7 @@ With this extension, users will be able to:
 
 ### Wireframes
 
-![wireframes](https://github.com/txie1993/Lambda/blob/master/Lambda.png?raw=true)
+![wireframes](https://github.com/txie1993/Lambda/blob/master/docs/Lambda.png?raw=true)
 
 ### Technologies & Technical Challenges
 
