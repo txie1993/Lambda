@@ -1,36 +1,31 @@
-## Lambda - An Ember Chat
+# Lambda - An Ember Chat
 
-### Background
+[Live](https://http://www.lambdaforthe.win/)
 
-Twitch chat culture is one of the most prominent phenomenon on the internet - the simple ability to add emotes through text recognition creates hundreds of reasons to use Twitch chat over another chat client.
+![splash](https://github.com/txie1993/Rush-Hour/blob/master/docs/Screen%20Shot%202016-11-17%20at%2011.03.30%20PM.png?raw=true)
+![chat](https://github.com/txie1993/Rush-Hour/blob/master/docs/Screen%20Shot%202016-11-17%20at%2011.03.30%20PM.png?raw=true)
 
-Like Twitch itself, I will be using Ember on the front end to deploy a chat client that can recognize words as emotes. Users will be able to select a username upon entering the chatroom, and spam the chat with emotes and copypasta to their heart's desire.
+## Background
 
-### Functionality & MVP
+Twitch chat culture is one of the most prominent phenomena on the internet - the simple ability to add emotes through text recognition creates hundreds of reasons to use Twitch chat over another chat client.
 
-With this extension, users will be able to:
+Like Twitch itself, I used Ember on the front end to deploy a chat client that can recognize words as emotes. Users are able to select a username upon entering the chatroom, and spam the chat with emotes and copypasta to their heart's desire.
 
-- [ ] Enter a username upon entering the chatroom
-- [ ] Send and receive messages
-- [ ] Send and receive emotes embedded in messages by typing the emotes' names
-- [ ] Be able to pull up an emote menu that will fill the chat for them, or tab autocomplete emote names.
+## Technologies and Languages Used
 
-### Wireframes
+* JavaScript (ES6)
+* Ember.js
+* CSS3
+* SASS
 
-![wireframes](https://github.com/txie1993/Lambda/blob/master/Lambda.png?raw=true)
 
-### Technologies & Technical Challenges
+## Implementation Details
 
-This app will be created with Ember and Pusher, both technologies I have not worked with in the past. I will need to allow myself some time to learn Ember and create some practice projects before I move onto actually creating Lambda.
+I did not know Ember when I began to write this app, and self-taught Ember as I wrote. Lambda is based on Zoltan's Ember Chat App, I consulted Zoltan over Twitter and other members of the Ember Community Slack channel for guidance when I got stuck.
 
-### Implementation Timeline
+## Future Features
 
-**Day 1/2**: Do Ember tutorials. Complete "making your first Ember app" on the Ember website.
-
-**Day 3-7 (weekend)**: Implement a basic chat. Users should be able to choose a username and be able to send messages.
-
-**Day 8**: The app should be able to recognize text as emotes.
-
-**Day 9**: Create an emote modal.
-
-**Day 10-11**: Styling
+- [ ] Copy/Paste Emotes
+- [ ] Migrate to Rails
+- [ ] More Emotes
+- [ ] Account System

@@ -18,19 +18,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    ready: () => {
-      console.log("ready");
-      let c = document.getElementById("chat");
-      c.scrollTop = c.scrollHeight;
-    },
     appendEmote(emote) {
       let m = this.controller.get('textMessageFromInput');
       if (m) this.controller.set("textMessageFromInput", m + " " + emote);
       else this.controller.set("textMessageFromInput", emote);
-    },
-    showHideEmotes() {
-      let menu = document.getElementById('emote-container');
-      menu.className = (menu.className === "hidden" ? "emote-container" : "hidden");
     },
     createMessage(message) {
       if (message) {
@@ -52,14 +43,6 @@ export default Ember.Route.extend({
           this.controller.set('textMessageFromInput', '');
         });
       }
-    },
-    saveKappa() {
-      let newEmote = this.store.createRecord('emote', {
-        name: "LUL",
-        url: "https://cdn.betterttv.net/emote/567b00c61ddbe1786688a633/1x"
-      });
-
-      newEmote.save();
     }
   }
 });
