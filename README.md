@@ -1,6 +1,6 @@
 # Lambda - An Ember Chat
 
-[Live](https://http://www.lambdaforthe.win/)
+[Live](https://www.lambdaforthe.win/)
 
 ![splash](https://github.com/txie1993/Lambda/blob/master/docs/Screen%20Shot%202016-11-30%20at%206.19.07%20PM.png?raw=true)
 ![chat](https://github.com/txie1993/Lambda/blob/master/docs/Screen%20Shot%202016-11-30%20at%206.21.02%20PM.png?raw=true)
