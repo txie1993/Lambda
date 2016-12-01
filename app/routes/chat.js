@@ -7,7 +7,6 @@ export default Ember.Route.extend({
 
   model(params) {
     this.set('userFromParams', params.user_name);
-    this.set('userColor', 'color: blue');
 
     return Ember.RSVP.hash({
       messages: this.store.query('message', {
