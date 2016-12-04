@@ -1,5 +1,8 @@
 import Ember from 'ember';
 import DS from "ember-data";
+import Filter from 'npm:bad-words';
+
+const filter = new Filter();
 
 
 export default Ember.Route.extend({
@@ -32,7 +35,7 @@ export default Ember.Route.extend({
           });
 
           let newRecord = this.store.createRecord('message', {
-            text: message,
+            text: filter.clean(message),
             user: this.get('userFromParams')
           });
 
