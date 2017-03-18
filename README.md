@@ -85,4 +85,4 @@ export default Ember.Component.extend({
 - [ ] Migrate to Rails
 - [ ] More Emotes
 - [ ] Account System
-- [ ] Dark Mode
+- [x] Dark Mode
