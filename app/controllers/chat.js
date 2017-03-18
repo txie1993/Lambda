@@ -13,6 +13,13 @@ export default Ember.Controller.extend({
       });
 
       newEmote.save();
+    },
+    setDarkMode(darkSetting) {
+      if (darkSetting) {
+        this.set("darkSetting", null);
+      } else {
+        this.set("darkSetting", Ember.String.htmlSafe("background-color: black"));
+      }
     }
   }
 

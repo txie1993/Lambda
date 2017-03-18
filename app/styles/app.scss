@@ -22,7 +22,7 @@ form {
   border-radius: 5px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1em;
   background: #C44208;
   padding: 10px 20px;
   text-decoration: none;
@@ -212,4 +212,10 @@ i:hover {
 
 .emote:hover {
   background: rgba(0,0,0,.1);
+}
+
+#dark{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
